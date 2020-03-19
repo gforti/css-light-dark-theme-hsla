@@ -1,0 +1,147 @@
+:root {
+  /** commonly used saturation/lightness/opacity levels **/
+  --saturation-darkest: 100%;
+  --saturation-darker: 80%;
+  --saturation-dark: 60%;
+  --saturation-normal: 50%; /* mid range - normal */
+  --saturation-light: 40%;
+  --saturation-lighter: 20%;
+  --saturation-lightest: 0%;
+
+  --lightness-darkest: 0%;
+  --lightness-darker: 20%;
+  --lightness-dark: 40%;
+  --lightness-normal: 50%; /* mid range - normal */
+  --lightness-light: 60%;
+  --lightness-lighter: 80%;
+  --lightness-lightest: 100%;
+
+  --opacity-full: 100%; /* no opacity - normal */
+  --opacity-light: 80%;
+  --opacity-lighter: 60%;
+  --opacity-lightest: 40%;
+
+  /* base hue colors */
+  --primary-hue: 0;
+  --secondary-hue: 199;
+
+  --header-hue: 45;
+  --on-header-hue: 0;
+
+  --contrastThreshold: 51%;
+
+  --primary: hsla(  var(--primary-hue),
+                    var(--saturation-normal),
+                    var(--lightness-normal),
+                    var(--opacity-full));
+
+  --switch: calc((var(--lightness-normal) - var(--contrastThreshold)) * -100);
+  --on-primary: hsla(  var(--primary-hue),
+                    var(--saturation-lightest),
+                    var(--switch),
+                    var(--opacity-full));
+
+  --primary-dark: hsla(  var(--primary-hue),
+                    var(--saturation-darker),
+                    var(--lightness-darker),
+                    var(--opacity-full));
+
+  --switch-dark: calc((var(--lightness-darker) - var(--contrastThreshold)) * -100);
+  --on-primary-dark: hsla(  var(--primary-hue),
+                    var(--saturation-darker),
+                    var(--switch-dark),
+                    var(--opacity-full));
+
+
+  --primary-light: hsla(  var(--primary-hue),
+                    var(--saturation-lighter),
+                    var(--lightness-lighter),
+                    var(--opacity-full));
+
+  --switch-light: calc((var(--lightness-lighter) - var(--contrastThreshold)) * -100);
+  --on-primary-light: hsla(  var(--primary-hue),
+                    var(--saturation-lighter),
+                    var(--switch-light),
+                    var(--opacity-full));
+
+
+
+
+/*
+  --on-primary: #fff;
+  --primary-variant: #0026ad;
+  --on-secondary: #fff;*/
+
+
+   /* base color 1 */
+   --base-color1: 210;
+   --color1-light:  hsla( var(--base-color1),
+                          var(--saturation-normal),
+                          var(--lightness-normal),
+                          var(--opacity-normal)  );
+   --color1-dark: hsla( var(--base-color1),
+                        var(--saturation-normal),
+                        var(--lightness-dark),
+                        var(--opacity-normal)  );
+
+    --base-color2: 60;
+    --color2-light:  hsla( var(--base-color2),
+                            var(--saturation-normal),
+                            var(--lightness-normal),
+                            var(--opacity-normal)  );
+    --color2-dark: hsla( var(--base-color2),
+                          var(--saturation-normal),
+                          var(--lightness-dark),
+                          var(--opacity-normal)  );
+
+
+
+    /*--background: #f5f5f5;
+    --on-background: #3c3a36;
+    --surface: #e8e7e3;
+    --on-surface: #999;
+
+    --primary: #4d68cb;
+    --on-primary: #fff;
+    --primary-variant: #0026ad;
+    --secondary: #506be5;
+    --on-secondary: #fff;
+    --success: #5ba014;
+    --danger: #d05050;*/
+  }
+
+  html,
+  body {
+    font-family: sans-serif;
+    font-size: 0.94em;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* || Header and Main Navigation */
+
+  .core-header {
+
+  }
+
+.light, .dark, .normal {
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid black;
+}
+
+.normal{
+  background-color: var(--primary);
+  color: var(--on-primary);
+  }
+
+.light{
+  background-color: var(--primary-light);
+  color: var(--on-primary-light);
+  }
+
+.dark {
+  background-color: var(--primary-dark);
+  color: var(--on-primary-dark);
+  }
+
